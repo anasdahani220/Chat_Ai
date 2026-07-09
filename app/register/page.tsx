@@ -36,7 +36,7 @@ export default function RegistrePage() {
 
         setLoading(true);
 
-        const { error } = await supabase.auth.signUp({
+        const { data, error } = await supabase.auth.signUp({
             email,
             password,
             options: {
@@ -48,6 +48,15 @@ export default function RegistrePage() {
 
         if (error) {
             setError(error.message);
+            setLoading(false);
+            return
+        }
+
+        // If email confirmation is required, signUp returns a user but no session.
+        // In that case, tell the user to confirm instead of redirecting to a
+        // protected page they can't access yet.
+        if (!data.session) {
+            setSuccess('Account created! Check your email to confirm your account before logging in.');
             setLoading(false);
             return
         }
