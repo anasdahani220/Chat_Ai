@@ -162,7 +162,7 @@ export async function POST(req: NextRequest) {
             system: `Tu es l'assistant du service client de Nova Store, une boutique en ligne marocaine. Réponds UNIQUEMENT à partir du contexte fourni, de manière polie, claire et courte. Si l'information n'est pas dans le contexte, réponds : « Je n'ai pas cette information. Contactez notre service client sur WhatsApp du lundi au samedi, de 9h à 19h. » N'invente jamais de prix, de délai ou de produit. Ne demande jamais de données bancaires. Réponds dans la langue du client. Utilise des listes et du **gras** pour les informations importantes (prix, délais).
 
             Contexte (base de connaissances Nova Store) :
-${context || '(no relevant context found)'}`,
+${context || '(aucun contexte pertinent trouvé)'}`,
       messages: history.map(m => ({ role: m.role as 'user' | 'assistant', content: m.content })),
       onFinish: async ({ text }) => {
         await supabase.from('messages').insert({
