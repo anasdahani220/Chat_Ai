@@ -204,7 +204,7 @@ export default function ChatView({ sessionId }: ChatViewProps) {
                                     style={{ width: '64px', height: '64px' }}
                                 />
                                 <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '14px', margin: 0 }}>
-                                    Hi {userName}! Ask Me About The Rules of Golf!
+                                    Bonjour {userName} ! Comment puis-je vous aider ?
                                 </p>
                             </div>
                         )}

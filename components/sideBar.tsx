@@ -70,7 +70,7 @@ export default function Sidebar({
           />
         </div>
         <span style={{ color: 'white', fontWeight: 600, fontSize: '14px', letterSpacing: '0.5px' }}>
-          Golf Rules AI
+          Nova Store Assistant
         </span>
       </div>
 
