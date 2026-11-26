@@ -115,9 +115,9 @@ export async function POST(req: NextRequest) {
     })
     if (rpcError) throw new Error(`match_documents RPC failed: ${rpcError.message}`)
 
-    // 2b. Keyword boost: if the user asked for a specific "Rule N", grab those chunks too.
-    // Embeddings can't reliably distinguish "Rule 9" from "Rule 10" since the digits
-    // carry almost no semantic weight, so we hit the table directly for exact references.
+    // 2b. Recherche par mot-clé : si le client cite une référence produit (ex. NV-201),
+    // on récupère directement les passages correspondants, car les embeddings
+    // distinguent mal deux références qui ne diffèrent que par les chiffres.
     const ruleMatches = Array.from(message.matchAll(/\bNV-(\d+)\b/gi)) as RegExpMatchArray[]
     const ruleNumbers = [...new Set(ruleMatches.map(m => m[1]))]
     let keywordDocs: { content: string }[] = []
