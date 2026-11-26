@@ -63,10 +63,10 @@ export default function Sidebar({
           flexShrink: 0,
         }}>
           <img
-            src="https://api.dicebear.com/9.x/bottts/svg?seed=GolfAI"
+            src="https://api.dicebear.com/9.x/bottts/svg?seed=NovaAI"
             alt="AI"
             style={{ width: '100%', height: '100%' }}
-            onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://robohash.org/GolfAI?set=set3'; }}
+            onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://robohash.org/NovaAI?set=set3'; }}
           />
         </div>
         <span style={{ color: 'white', fontWeight: 600, fontSize: '14px', letterSpacing: '0.5px' }}>

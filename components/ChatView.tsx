@@ -199,7 +199,7 @@ export default function ChatView({ sessionId }: ChatViewProps) {
                                 justifyContent: 'center', paddingTop: '80px', gap: '12px',
                             }}>
                                 <img
-                                    src="https://api.dicebear.com/9.x/bottts/svg?seed=GolfAI"
+                                    src="https://api.dicebear.com/9.x/bottts/svg?seed=NovaAI"
                                     alt="AI"
                                     style={{ width: '64px', height: '64px' }}
                                 />
@@ -218,7 +218,7 @@ export default function ChatView({ sessionId }: ChatViewProps) {
                                 }}>
                                     {msg.role === 'assistant' && (
                                         <div style={{ width: '28px', height: '28px', borderRadius: '50%', overflow: 'hidden', flexShrink: 0 }}>
-                                            <img src="https://api.dicebear.com/9.x/bottts/svg?seed=GolfAI" alt="AI" style={{ width: '100%', height: '100%' }} />
+                                            <img src="https://api.dicebear.com/9.x/bottts/svg?seed=NovaAI" alt="AI" style={{ width: '100%', height: '100%' }} />
                                         </div>
                                     )}
                                     <div style={{
@@ -312,7 +312,7 @@ export default function ChatView({ sessionId }: ChatViewProps) {
                             {isLoading && (
                                 <div style={{ display: 'flex', gap: '8px' }}>
                                     <div style={{ width: '28px', height: '28px', borderRadius: '50%', overflow: 'hidden' }}>
-                                        <img src="https://api.dicebear.com/9.x/bottts/svg?seed=GolfAI" alt="AI" style={{ width: '100%', height: '100%' }} />
+                                        <img src="https://api.dicebear.com/9.x/bottts/svg?seed=NovaAI" alt="AI" style={{ width: '100%', height: '100%' }} />
                                     </div>
                                     <div style={{ padding: '12px 16px', borderRadius: '18px 18px 18px 4px', background: 'rgba(0,0,0,0.35)' }}>
                                         <div style={{ display: 'flex', gap: '4px' }}>
